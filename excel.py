@@ -33,3 +33,8 @@ for row_index in range(sheet.nrows):
 for row_index in range(sheet.nrows):
     row = sheet.row(row_index)  
     print(row)
+
+print('===========================================')
+
+sheet = book.sheet_by_index(0)
+print(sheet.nrow)
