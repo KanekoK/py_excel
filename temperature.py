@@ -16,5 +16,6 @@ if os.path.exists(xlfile):
             data[r-2, c] = sheet1.cell(r, c).value
     yamaguchi = data[:, 1].mean()
     tokyo = data[:, 3].mean()
-    msg = "山口県(mean): %.2f\n東京都(mean): %.2f" % (yamaguchi, tokyo)
+    t,p = stats.ttest_ind(yamaguchi, tokyo, equal_var=False)
+    msg = "p-value: %.5f" % p
     print(msg)
