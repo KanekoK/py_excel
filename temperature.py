@@ -17,5 +17,5 @@ if os.path.exists(xlfile):
     yamaguchi = data[:, 1].mean()
     tokyo = data[:, 3].mean()
     t,p = stats.ttest_ind(yamaguchi, tokyo, equal_var=False)
-    msg = "p-value: %.5f" % p
-    print(msg)
+    # msg = "p-value: %.5f" % p
+    # print(msg)
