@@ -4,6 +4,7 @@ import numpy as np
 from scipy import stats
 xlfile = "data.xlsx"
 
+
 if os.path.exists(xlfile):
     xls = xlrd.open_workbook(xlfile)
     sheet1 = xls.sheet_by_index(0)
@@ -17,5 +18,5 @@ if os.path.exists(xlfile):
     yamaguchi = data[:, 1].mean()
     tokyo = data[:, 3].mean()
     t,p = stats.ttest_ind(yamaguchi, tokyo, equal_var=False)
-    # msg = "p-value: %.5f" % p
-    # print(msg)
+    msg = "p-value: %.5f" % p
+    print(msg)
